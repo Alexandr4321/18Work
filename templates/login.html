@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+
+
+{%block content%}
+{%if form%}
+<form action="" methods = "post">
+    {{form.csrf_token}}
+
+    {{from.email.label}}
+    {{form.email()}}
+    <br>    
+    {{from.password.label}}
+    {{form.password()}}
+    <br>
+    {{form.submit()}}
+{%endif%}
+
+{{message}}
+
+</from>
+
+{%endblock %}
